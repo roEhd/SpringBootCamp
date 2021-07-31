@@ -4,16 +4,14 @@ import com.example.demo.entity.Hello;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 
 @RestController
 public class helloRestController {
 
-    @GetMapping("hello-string")
-    public String helloString(String name){
-        return String.format("Hello, %s", name);
-    }
+
 
     @GetMapping("hello-map")
     public Map<String, Object> helloMap(String name){
@@ -26,6 +24,9 @@ public class helloRestController {
     public Hello helloObject(String name) {
         Hello h = new Hello();
         h.setName(name);
+        String a = "abs";
+        a.getBytes(StandardCharsets.UTF_8);
         return h;
     }
+
 }

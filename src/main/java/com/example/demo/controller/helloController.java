@@ -17,7 +17,6 @@ import javax.annotation.PreDestroy;
 @Slf4j
 @RequiredArgsConstructor
 public class helloController {
-
     final MemberService memberService;
 
     @GetMapping("hello-string")
